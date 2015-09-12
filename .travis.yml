@@ -1,0 +1,20 @@
+language: c
+os:
+  - linux
+  - osx
+install:
+  - git clone git://github.com/nim-lang/Nim.git
+  - cd Nim
+  - git clone --depth 1 git://github.com/nim-lang/csources
+  - cd csources && sh build.sh && cd ..
+  - bin/nim c koch
+  - ./koch boot -d:release
+  - export PATH=$PWD/bin:$PATH
+  - cd ..
+  - git clone https://github.com/nim-lang/nimble.git
+  - cd nimble && nim c -r src/nimble install && cd ..
+  - export PATH=$HOME/.nimble/bin:$PATH
+  - npm install gulp -g
+  - npm install gulp
+script:
+  - gulp build
