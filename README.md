@@ -3,7 +3,7 @@ coreutils
 
 [![Build Status](https://travis-ci.org/cpunion/coreutils.svg?branch=develop)](https://travis-ci.org/cpunion/coreutils)
 
-This project is a Nim rewrite of the GNU coreutils.
+This project is my learning project of Nim language, a Nim rewrite of the GNU coreutils.
 
 Why?
 ----
